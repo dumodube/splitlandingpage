@@ -1,0 +1,136 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html h1, body h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 100;
+}
+
+html .button, body .button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: white;
+  border: white solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html .container, body .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+html .split, body .split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html .split.left, body .split.left {
+  left: 0;
+  background: url("../img/pexels-photo-207665.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+html .split.left .button:hover, body .split.left .button:hover {
+  background-color: rgba(161, 11, 11, 0.3);
+  border-color: rgba(161, 11, 11, 0.3);
+}
+
+html .split.left:before, body .split.left:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(223, 39, 39, 0.7);
+}
+
+html .split.right, body .split.right {
+  right: 0;
+  background: url("../img/pexels-photo-214221.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+html .split.right .button:hover, body .split.right .button:hover {
+  background-color: rgba(92, 92, 92, 0.3);
+  border-color: rgba(92, 92, 92, 0.3);
+}
+
+html .split.right:before, body .split.right:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 43, 43, 0.8);
+}
+
+html .split.left, html .split.right, html .split.right::before, html .split.left::before, body .split.left, body .split.right, body .split.right::before, body .split.left::before {
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+html .hover-left .left, body .hover-left .left {
+  width: 75%;
+}
+
+html .hover-left .right, body .hover-left .right {
+  width: 25%;
+}
+
+html .hover-left .right::before, body .hover-left .right::before {
+  z-index: 2;
+}
+
+html .hover-right .right, body .hover-right .right {
+  width: 75%;
+}
+
+html .hover-right .left, body .hover-right .left {
+  width: 25%;
+}
+
+html .hover-right .left::before, body .hover-right .left::before {
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  html h1, body h1 {
+    font-size: 2rem;
+  }
+  html .button, body .button {
+    width: 12re;
+  }
+}
+
+@media (max-height: 700px) {
+  html .button, body .button {
+    top: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
